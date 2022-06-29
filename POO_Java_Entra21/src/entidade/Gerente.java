@@ -1,6 +1,6 @@
 package entidade;
 
-public class Gerente extends Funcionario{
+public class Gerente extends Funcionario { //extends significa que 'Gerente' parte da classe 'Funcionáro'.
 
 	public Gerente(String nome, double salario) {
 		super(nome, salario);
