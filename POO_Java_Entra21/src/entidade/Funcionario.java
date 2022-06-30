@@ -15,7 +15,6 @@ public class Funcionario {
 	}
 
 	private double calcularDesconto() {
-		//TODO usar uma constante para o desconto
 		return this.getSalario() * 0.11;
 	}
 
