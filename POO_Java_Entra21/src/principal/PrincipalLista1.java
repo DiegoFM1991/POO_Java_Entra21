@@ -1,61 +1,47 @@
 package principal;
 
-import entidade.Conta_principalLista1;
+import entidade.Conta;
 
 public class PrincipalLista1 {
 
-/*		Desenvolva uma aplicaÁ„o (uma classe PrincipalLista1, com mÈtodo main) que efetue as seguintes operaÁıes:
-		ï Crie uma conta chamada ìconta1î, com agÍncia 123-7, conta 12345-6 e saldo inicial de 300;
-		ï Efetue um saque de 250 e mostre o valor sacado na tela;
-		ï Efetue outro saque de 300 e mostre o valor sacado na tela;
-		ï FaÁa um depÛsito de 200;
-		ï FaÁa um rendimento de 0.5%;
-		ï FaÁa um rendimento de 0,8%;
-		ï Mostre o valor do saldo atual na tela.
-*/
-	
 	public static void main(String[] args) {
-		
+		//Crie uma conta chamada ‚Äúconta1‚Äù
+		//	com ag√™ncia 123-7, 
+		//	conta 12345-6 e saldo inicial de 300;
 		double valorParaSacar = 250;
 		
-		//Desenvolva uma aplicaÁ„o (uma classe PrincipalLista1, com mÈtodo main) que efetue as seguintes operaÁıes:
-		//Crie uma conta chamada ìconta1î, com agÍncia 123-7, conta 12345-6 e saldo inicial de 300.
-		Conta_principalLista1 conta1 = new Conta_principalLista1("123-7", "12345-6", 300);
-		System.out.println("Saldo da conta: R$" + conta1.getSaldoConta());
+		Conta conta1 = new Conta("123-7", "12345-6", 300);
+		
+		System.out.println("Saldo da conta: R$" + conta1.getSaldo());
+		
+		double valorSacadoDeFato = conta1.sacar(valorParaSacar);
 		
 		System.out.println("Solicitado o saque de R$" + valorParaSacar);
-		
-		//Efetue um saque de 250 e mostre o valor sacado na tela.
-		double valorSacadoDeFato = conta1.sacar(valorParaSacar);
+		//Efetue um saque de 250 e mostre o valor sacado na tela;
 		System.out.println("Sacado R$" + valorSacadoDeFato);
-		System.out.println("Saldo da conta: R$" + conta1.getSaldoConta());
+		System.out.println("Saldo da conta: R$" + conta1.getSaldo());
 		
-		//FaÁa um depÛsito de 200.
-		System.out.println("Solicitado o depÛsito de R$200");
-		conta1.depositar(200);
-		System.out.println("Saldo da conta: R$" + conta1.getSaldoConta());
-		
-		//Efetue outro saque de 300 e mostre o valor sacado na tela.
+		//Efetue outro saque de 300 e mostre o valor sacado na tela;
 		System.out.println("Solicitado o saque de R$300");
 		System.out.println("Sacado R$" + conta1.sacar(300));
-		System.out.println("Saldo da conta: R$" + conta1.getSaldoConta());
-
-		//FaÁa um depÛsito de 200.
-		System.out.println("Solicitado o depÛsito de R$200");
+		System.out.println("Saldo da conta: R$" + conta1.getSaldo());
+		
+		//Fa√ßa um dep√≥sito de 200;
+		System.out.println("Solicitado o dep√≥sito de R$200");
 		conta1.depositar(200);
-		System.out.println("Saldo da conta: R$" + conta1.getSaldoConta());
-	
-		//FaÁa um rendimento de 0.5%.
+		System.out.println("Saldo da conta: R$" + conta1.getSaldo());
+		
+		//Fa√ßa um rendimento de 0.5%;
 		System.out.println("Solicitado o rendimento de 0.5%");
 		conta1.efetuarRendimento(0.5);
-		System.out.println("Saldo da conta: R$" + conta1.getSaldoConta());
-	
-		//FaÁa um rendimento de 0.8%.
+		System.out.println("Saldo da conta: R$" + conta1.getSaldo());
+		
+		//Fa√ßa um rendimento de 0.8%;
 		System.out.println("Solicitado o rendimento de 0.8%");
 		conta1.efetuarRendimento(0.8);
-		System.out.println("Saldo da conta: R$" + conta1.getSaldoConta());
-
+		System.out.println("Saldo da conta: R$" + conta1.getSaldo());
+		
 		//Mostre o valor do saldo atual na tela.
-		System.out.println("Saldo da conta: R$" + conta1.getSaldoConta());
+		
 	}
 }
